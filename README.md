@@ -103,7 +103,7 @@ nmap \ :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=40
 let g:NERDTreeGitStatusWithFlags = 1
-let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen = 0
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
@@ -113,8 +113,7 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
-nnoremap <silent> <F1> :NERDTreeFind<CR>
-nnoremap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
 
 nmap <C-J> :m +1<CR>
 nmap <C-K> :m -2<CR>
@@ -126,12 +125,10 @@ nmap <C-X> :bd<CR>
 " Debug configuration
 "*************************************************************
 
-let g:floaterm_keymap_new    = '<F5>'
-let g:floaterm_keymap_show   = '<F8>'
-let g:floaterm_keymap_hide   = '<F6>'
+let g:floaterm_keymap_new    = '<F6>'
 let g:floaterm_keymap_prev   = '<F7>'
+let g:floaterm_keymap_toggle = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_shell='zsh'
 let g:floaterm_width=1.0
 let g:floaterm_height=0.4
@@ -336,5 +333,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
 ```
